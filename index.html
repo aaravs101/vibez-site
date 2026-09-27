@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vibez: the IDE where you can see your app</title>
+<meta name="description" content="Vibez is an IDE built on Code - OSS. See every page of your site at once, edit it on the canvas, write logic as readable graphs, and let agents work in parallel with results that are measured, not claimed.">
+<meta property="og:title" content="Vibez">
+<meta property="og:description" content="The IDE where you can see your app: every page on one canvas, logic as readable graphs, and agents whose wins are measured.">
+<meta property="og:image" content="assets/icon-512.png">
+<link rel="icon" href="assets/icon-32.png" sizes="32x32">
+<link rel="icon" href="assets/icon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top"><img src="assets/logo-sm.png" alt="Vibez" width="112" height="36"></a>
+  <nav>
+    <a href="#canvas">Site canvas</a>
+    <a href="#logic">Logic</a>
+    <a href="#agents">Agents</a>
+    <a href="#principles">Principles</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow">An IDE built on Code - OSS</p>
+    <h1>See your app.<br><span>Then change it.</span></h1>
+    <p class="lede">Vibez puts every page of your site on one canvas, running for real. Double-click anything to learn what it does, drag it where you want it, and the HTML file changes with it. Logic reads as a graph. Agents work side by side, and every speed-up they claim gets measured.</p>
+    <div class="cta">
+      <a class="btn primary" href="#canvas">Take the tour</a>
+      <a class="btn" href="#principles">How it thinks</a>
+    </div>
+  </section>
+
+  <figure class="shot">
+    <div class="frame"><img src="assets/canvas.jpg" alt="The Vibez Site canvas showing four pages of a bakery website side by side, with lines connecting links to the pages they open" width="1372" height="457"></div>
+    <figcaption>The Site canvas on a four-page bakery site: every page live, every link drawn to where it goes.</figcaption>
+  </figure>
+
+  <section id="canvas" class="feature">
+    <div class="copy">
+      <p class="eyebrow">Site canvas</p>
+      <h2>Your whole site, on one screen</h2>
+      <p>Open a folder and every page appears side by side: styled, scrollable, scripts working. Lines run from each link, from where it sits on the page, to the page it opens.</p>
+      <ul class="points">
+        <li><b>Double-click to understand.</b> Where a link goes, what a button's code does, what a form sends, and the file and line behind it, in plain words.</li>
+        <li><b>Drag to design.</b> Elements go exactly where you drop them, snap to their neighbours, and save to that element only.</li>
+        <li><b>Drop in new pieces.</b> Buttons, cards and sections from the element library land where your cursor is.</li>
+        <li><b>Delete without fear.</b> Pages go to the Trash with their nav links. ⌘Z brings anything back.</li>
+        <li><b>Full-length pages.</b> See each page top to bottom, or open one alone and edit it in focus.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="logic" class="feature alt">
+    <div class="copy">
+      <p class="eyebrow">Logic</p>
+      <h2>Code you can read at a glance</h2>
+      <p>The <code>.vi</code> editor turns app logic into graphs. White wires carry the order things happen in. Coloured wires carry the data.</p>
+      <ul class="points">
+        <li><b>Grouped by purpose.</b> Page data, page actions, functions and variables, each in its place.</li>
+        <li><b>Compile checks it.</b> Mistakes come back as errors that tell you what to fix.</li>
+        <li><b>Run and test.</b> Start the local server, or test a single function with typed inputs and see the output in the console.</li>
+        <li><b>Files stay the source of truth.</b> Edit outside Vibez and the graph follows.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="agents" class="feature">
+    <div class="copy">
+      <p class="eyebrow">Agents</p>
+      <h2>Many agents at once. One honest number.</h2>
+      <p>Select part of your app and hand it to an agent. Each one edits its own copy of the repo inside a fence of files it owns, so agents never overwrite each other. Finished patches wait in line for one measurement lane, which replays a recorded flow and times it before and after.</p>
+      <div class="card">
+        <div class="row"><span class="dot a"></span><span class="t">getUserStats</span><span class="s">measured · ready to land</span><span class="v good">−48%</span></div>
+        <div class="row"><span class="dot b"></span><span class="t">checkout.ts</span><span class="s">claimed −70% · measured −4% · not significant</span><span class="v">−4%</span></div>
+        <div class="row"><span class="dot c"></span><span class="t">cart query</span><span class="s">edited · queued 2nd</span><span class="v muted">…</span></div>
+      </div>
+      <p class="note">A claim that doesn't survive measurement stays on the card, marked as such. Landing is one click, and so is undo.</p>
+    </div>
+  </section>
+
+  <section id="principles" class="principles">
+    <h2>What Vibez believes</h2>
+    <div class="grid">
+      <div><h3>Files are the truth</h3><p>Every edit on a canvas is an edit to a real file you can read, diff and commit.</p></div>
+      <div><h3>Measured, not claimed</h3><p>Speed-ups are timed over repeated runs and tested for significance before they count.</p></div>
+      <div><h3>Show what actually ran</h3><p>Flows are built from traces of your running app, not from guesses about the code.</p></div>
+      <div><h3>Plain words</h3><p>Explanations say what something does, not what it's called.</p></div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <h2>Vibez is in active development.</h2>
+    <p>It's built on Code - OSS, so your editor, extensions and keybindings come with you.</p>
+  </section>
+</main>
+
+<footer>
+  <span><img src="assets/logo-sm.png" alt="Vibez" width="75" height="24"></span>
+  <span>© 2026</span>
+</footer>
+
+</body>
+</html>
