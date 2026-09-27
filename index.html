@@ -121,6 +121,11 @@
       <p>Vibez apps are written in <code>.vi</code>, a language of blocks and wires. Every graph compiles into a real JavaScript function, so what you build runs like any other JavaScript.</p>
     </div>
 
+    <figure class="real reveal">
+      <img src="assets/vi-editor.jpg" alt="The Vibez logic editor showing the CalculateUnitPrice function: Start, Divide, Concatenate, To String and Print to Console blocks wired to Return, with the Logic panel on the left and Details on the right" width="1212" height="788" loading="lazy">
+      <figcaption>The real thing: a function in the Vibez logic editor, with its inputs, blocks and a one-click test.</figcaption>
+    </figure>
+
     <div class="compare reveal">
       <div class="pane graph-pane">
         <div class="pane-bar"><span>unitPrice.vi</span><span class="chip">graph</span></div>
@@ -156,12 +161,12 @@
 
     <div class="link-head reveal">
       <h3>Pages and logic, <em>linked by name.</em></h3>
-      <p>Build the page in the page editor and point each part at the <code>.vi</code> file behind it. A field fills an input, a button runs an action, a list repeats over data.</p>
+      <p>Double-click any part of a page on the Site canvas and connect it to the <code>.vi</code> file behind it. A field fills an input, a button runs an action, a list repeats over data, and text can show what an action answered.</p>
     </div>
 
     <div class="compare link reveal">
       <div class="pane page-pane">
-        <div class="pane-bar"><span>signup.ui</span><span class="chip">page editor</span></div>
+        <div class="pane-bar"><span>signup.ui</span><span class="chip">site canvas</span></div>
         <div class="mini-page">
           <div class="mp-nav"><span class="mp-logo"></span><span></span><span></span><span></span></div>
           <h5>Join the club</h5>
@@ -204,6 +209,11 @@
       <div><h4>Types you can read</h4><p>Text, numbers, true or false, links, dates, objects and lists, each wire coloured by the kind of data it carries.</p></div>
       <div><h4>Pages meet logic by name</h4><p>A button runs an action, a list repeats over data. The page only offers the links that fit.</p></div>
       <div><h4>Run and test one piece</h4><p>Try a single function with your own inputs and watch its output in the console.</p></div>
+    </div>
+    <div class="row3 reveal">
+      <div><h4>Classes and objects</h4><p>Give a class fields and methods, let one class extend another, and it compiles to a real JavaScript class.</p></div>
+      <div><h4>Lists without loops</h4><p>Map, Filter, Reduce, Some and Every run one of your functions on each item of a list.</p></div>
+      <div><h4>Show what happened</h4><p>A page can show what an action answered, like "Ordered Sourdough!", right after the button is clicked.</p></div>
     </div>
   </section>
 
@@ -272,11 +282,17 @@
           <h3>Every page, <em>every link.</em></h3>
         </div>
       </div>
-      <div class="tile reveal">
-        <img src="assets/dashboard.jpg" alt="The Vibez Dashboard with page templates">
+      <div class="tile connect reveal">
+        <div class="connect-card">
+          <div class="cc-top">Connect to logic</div>
+          <div class="cc-row"><span>Shows</span><b>orders.vi · total</b></div>
+          <div class="cc-row"><span>Repeats for each</span><b>orders.vi · items</b></div>
+          <div class="cc-row on"><span>When clicked</span><b>run orders.vi · place</b></div>
+          <div class="cc-row"><span>Goes to</span><b>menu.html</b></div>
+        </div>
         <div class="tile-cap">
-          <span class="tag">Templates</span>
-          <h3>New pages <em>that fit.</em></h3>
+          <span class="tag">Connect</span>
+          <h3>Wire it up <em>without code.</em></h3>
         </div>
       </div>
     </div>
@@ -287,6 +303,9 @@
       <div><h4>Full-length pages</h4><p>See every page top to bottom, or open one alone.</p></div>
       <div><h4>Phone, tablet, desktop</h4><p>Every page re-renders at the size you pick.</p></div>
       <div><h4>View it like a visitor</h4><p>Open the site in your browser the way people will see it.</p></div>
+      <div><h4>Start from a sentence</h4><p>Describe your app or pick a template, and Vibez builds the pages already connected to logic that runs.</p></div>
+      <div><h4>Honest previews</h4><p>When a page is showing sample data because its logic isn't running, it tells you.</p></div>
+      <div><h4>Open a page, see the page</h4><p>Opening a <code>.ui</code> file takes you straight to it on the Site canvas.</p></div>
     </div>
   </section>
 

@@ -93,6 +93,18 @@
     })();
   }
 
+
+  /* Connect to logic: step through the choices */
+  const ccRows = document.querySelectorAll('.connect-card .cc-row');
+  if (ccRows.length) {
+    (async () => {
+      for (let i = 0; ; i = (i + 1) % ccRows.length) {
+        ccRows.forEach((r, j) => r.classList.toggle('on', j === i));
+        await wait(1800);
+      }
+    })();
+  }
+
   /* Plain-words explanations, one after another */
   const bubble = document.getElementById('bubble');
   const bTitle = document.getElementById('bTitle');
