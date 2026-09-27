@@ -3,107 +3,270 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vibez: the IDE where you can see your app</title>
-<meta name="description" content="Vibez is an IDE built on Code - OSS. See every page of your site at once, edit it on the canvas, write logic as readable graphs, and let agents work in parallel with results that are measured, not claimed.">
+<title>Vibez: build together, see how it works</title>
+<meta name="description" content="Vibez is an IDE with its own visual language built on JavaScript. Your team and your AI agents work on one project together, and every part of the app is laid out and explained in plain words.">
 <meta property="og:title" content="Vibez">
-<meta property="og:description" content="The IDE where you can see your app: every page on one canvas, logic as readable graphs, and agents whose wins are measured.">
+<meta property="og:description" content="A visual language built on JavaScript, made for teams and for beginners. See how your app works, and build it together.">
 <meta property="og:image" content="assets/icon-512.png">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="assets/icon-32.png" sizes="32x32">
 <link rel="icon" href="assets/icon-64.png" sizes="64x64">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="nav">
-  <a class="brand" href="#top"><img src="assets/logo-sm.png" alt="Vibez" width="112" height="36"></a>
+  <a class="brand" href="#top"><img src="assets/logo-light-sm.png" alt="Vibez" width="112" height="36"></a>
   <nav>
-    <a href="#canvas">Site canvas</a>
-    <a href="#logic">Logic</a>
-    <a href="#agents">Agents</a>
-    <a href="#principles">Principles</a>
+    <a href="#together">Together</a>
+    <a href="#language">The language</a>
+    <a href="#learn">Learn</a>
+    <a href="#canvas">Canvas</a>
   </nav>
 </header>
 
 <main id="top">
+
   <section class="hero">
-    <p class="eyebrow">An IDE built on Code - OSS</p>
-    <h1>See your app.<br><span>Then change it.</span></h1>
-    <p class="lede">Vibez puts every page of your site on one canvas, running for real. Double-click anything to learn what it does, drag it where you want it, and the HTML file changes with it. Logic reads as a graph. Agents work side by side, and every speed-up they claim gets measured.</p>
-    <div class="cta">
-      <a class="btn primary" href="#canvas">Take the tour</a>
-      <a class="btn" href="#principles">How it thinks</a>
-    </div>
-  </section>
-
-  <figure class="shot">
-    <div class="frame"><img src="assets/canvas.jpg" alt="The Vibez Site canvas showing four pages of a bakery website side by side, with lines connecting links to the pages they open" width="1372" height="457"></div>
-    <figcaption>The Site canvas on a four-page bakery site: every page live, every link drawn to where it goes.</figcaption>
-  </figure>
-
-  <section id="canvas" class="feature">
-    <div class="copy">
-      <p class="eyebrow">Site canvas</p>
-      <h2>Your whole site, on one screen</h2>
-      <p>Open a folder and every page appears side by side: styled, scrollable, scripts working. Lines run from each link, from where it sits on the page, to the page it opens.</p>
-      <ul class="points">
-        <li><b>Double-click to understand.</b> Where a link goes, what a button's code does, what a form sends, and the file and line behind it, in plain words.</li>
-        <li><b>Drag to design.</b> Elements go exactly where you drop them, snap to their neighbours, and save to that element only.</li>
-        <li><b>Drop in new pieces.</b> Buttons, cards and sections from the element library land where your cursor is.</li>
-        <li><b>Delete without fear.</b> Pages go to the Trash with their nav links. ⌘Z brings anything back.</li>
-        <li><b>Full-length pages.</b> See each page top to bottom, or open one alone and edit it in focus.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="logic" class="feature alt">
-    <div class="copy">
-      <p class="eyebrow">Logic</p>
-      <h2>Code you can read at a glance</h2>
-      <p>The <code>.vi</code> editor turns app logic into graphs. White wires carry the order things happen in. Coloured wires carry the data.</p>
-      <ul class="points">
-        <li><b>Grouped by purpose.</b> Page data, page actions, functions and variables, each in its place.</li>
-        <li><b>Compile checks it.</b> Mistakes come back as errors that tell you what to fix.</li>
-        <li><b>Run and test.</b> Start the local server, or test a single function with typed inputs and see the output in the console.</li>
-        <li><b>Files stay the source of truth.</b> Edit outside Vibez and the graph follows.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="agents" class="feature">
-    <div class="copy">
-      <p class="eyebrow">Agents</p>
-      <h2>Many agents at once. One honest number.</h2>
-      <p>Select part of your app and hand it to an agent. Each one edits its own copy of the repo inside a fence of files it owns, so agents never overwrite each other. Finished patches wait in line for one measurement lane, which replays a recorded flow and times it before and after.</p>
-      <div class="card">
-        <div class="row"><span class="dot a"></span><span class="t">getUserStats</span><span class="s">measured · ready to land</span><span class="v good">−48%</span></div>
-        <div class="row"><span class="dot b"></span><span class="t">checkout.ts</span><span class="s">claimed −70% · measured −4% · not significant</span><span class="v">−4%</span></div>
-        <div class="row"><span class="dot c"></span><span class="t">cart query</span><span class="s">edited · queued 2nd</span><span class="v muted">…</span></div>
+    <img class="hero-bg" src="assets/canvas.jpg" alt="">
+    <div class="hero-inner">
+      <p class="kicker">A visual language built on JavaScript</p>
+      <h1><span class="line"><span>Build it together.</span></span><span class="line"><span><em class="shift">See how it works.</em></span></span></h1>
+      <p class="lede">Vibez is an IDE where your app's logic is a graph you can read, your pages sit side by side on one canvas, and your whole team, people and AI agents alike, works on the same project without stepping on each other.</p>
+      <div class="hero-actions">
+        <a class="ghost" href="#together">Working together →</a>
+        <a class="ghost" href="#language">The language →</a>
+        <a class="ghost" href="#learn">Made for beginners →</a>
       </div>
-      <p class="note">A claim that doesn't survive measurement stays on the card, marked as such. Landing is one click, and so is undo.</p>
     </div>
   </section>
 
-  <section id="principles" class="principles">
-    <h2>What Vibez believes</h2>
-    <div class="grid">
-      <div><h3>Files are the truth</h3><p>Every edit on a canvas is an edit to a real file you can read, diff and commit.</p></div>
-      <div><h3>Measured, not claimed</h3><p>Speed-ups are timed over repeated runs and tested for significance before they count.</p></div>
-      <div><h3>Show what actually ran</h3><p>Flows are built from traces of your running app, not from guesses about the code.</p></div>
-      <div><h3>Plain words</h3><p>Explanations say what something does, not what it's called.</p></div>
+  <div class="strip" aria-label="Built with">
+    <div class="marquee"><div class="track"><span>Code - OSS</span><span>JavaScript</span><span>Claude Code</span><span>MCP</span><span>Supabase</span><span>Git worktrees</span><span>Plain HTML</span></div><div class="track" aria-hidden="true"><span>Code - OSS</span><span>JavaScript</span><span>Claude Code</span><span>MCP</span><span>Supabase</span><span>Git worktrees</span><span>Plain HTML</span></div></div>
+  </div>
+
+  <!-- 1. Together -->
+  <section id="together" class="section">
+    <div class="s-head reveal">
+      <span class="tag">Together</span>
+      <h2>One project.<br><em>Everyone on it.</em></h2>
+      <p>Your teammates and their AI agents work on the same app from their own laptops. Everyone sees who is working on what, and gets a heads-up before two people change the same thing.</p>
     </div>
+
+    <div class="bento team">
+      <div class="tile tile-tall feed reveal">
+        <div class="tile-cap top">
+          <span class="tag">Team view</span>
+          <h3>Who's working<br><em>on what.</em></h3>
+        </div>
+        <div class="people">
+          <div class="person"><i class="av a1">M</i><div><b>Maya's agent</b><span>Adding a signup form · <code>signup.ui</code></span></div><s class="dot on"></s></div>
+          <div class="person"><i class="av a2">L</i><div><b>Leo's agent</b><span>Fixing checkout totals · <code>cart.vi</code></span></div><s class="dot on"></s></div>
+          <div class="person"><i class="av a3">S</i><div><b>Sam</b><span>Editing the home page · <code>index.html</code></span></div><s class="dot"></s></div>
+        </div>
+        <div class="events" id="events" aria-live="off">
+          <div class="event warn"><b>Heads-up</b> Leo's agent is already editing <code>cart.vi</code></div>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <div class="tile-cap">
+          <span class="tag">Heads-ups</span>
+          <h3>Warned, <em>never blocked.</em></h3>
+          <p>Before an edit is written, Vibez checks who else is nearby: the same file or element, the same page, or a task described in similar words.</p>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <div class="tile-cap">
+          <span class="tag">Handoffs</span>
+          <h3>Pass it on, <em>pick it up.</em></h3>
+          <p>Hand a task, its next steps and its files to a teammate. They click <b>Take over</b> and carry on where you left off.</p>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <div class="tile-cap">
+          <span class="tag">Shared notes</span>
+          <h3>Leave a note <em>on a file.</em></h3>
+          <p>A decision or a gotcha pinned to a file is shown to every agent that starts working near it.</p>
+        </div>
+      </div>
+
+      <div class="tile reveal">
+        <div class="tile-cap">
+          <span class="tag">In the editor</span>
+          <h3>See it <em>where you work.</em></h3>
+          <p>A bar names who holds a file, claimed elements are outlined on the page, and graph blocks show who is changing them.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row3 reveal">
+      <div><h4>Agents in their own lanes</h4><p>Start several AI agents at once. Each one works in its own copy of the project and only touches the files it was given.</p></div>
+      <div><h4>Join with a code</h4><p>Create a team, share the join code, and teammates are in. Start or join right inside the IDE, no terminal needed.</p></div>
+      <div><h4>Only your team</h4><p>Everything the team shares is visible to its members and nobody else.</p></div>
+    </div>
+  </section>
+
+  <!-- 2. Language -->
+  <section id="language" class="section lang">
+    <div class="s-head reveal">
+      <span class="tag">The language</span>
+      <h2>A new way to write code.<br><em>Built on JavaScript.</em></h2>
+      <p>Vibez apps are written in <code>.vi</code>, a language of blocks and wires. Every graph compiles into a real JavaScript function, so what you build runs like any other JavaScript.</p>
+    </div>
+
+    <div class="compare reveal">
+      <div class="pane graph-pane">
+        <div class="pane-bar"><span>unitPrice.vi</span><span class="chip">graph</span></div>
+        <svg viewBox="0 0 440 260" aria-label="A graph that divides a total by a count, prints the result, and returns it">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#1ea7ff"/><stop offset="1" stop-color="#c7148f"/></linearGradient></defs>
+          <path d="M100 40 C140 40 150 40 180 40" class="wire exec"/><path class="flow w" d="M100 40 C140 40 150 40 180 40"/>
+          <path d="M300 40 C330 40 330 40 350 40" class="wire exec"/><path class="flow w" d="M300 40 C330 40 330 40 350 40"/>
+          <path d="M100 150 C150 150 130 160 180 160" class="wire data" stroke="url(#g1)"/><path class="flow c" d="M100 150 C150 150 130 160 180 160"/>
+          <path d="M100 200 C150 200 130 180 180 180" class="wire data" stroke="url(#g1)"/><path class="flow c" d="M100 200 C150 200 130 180 180 180"/>
+          <path d="M270 170 C300 170 290 70 205 70" class="wire data" stroke="#c7148f"/>
+          <path d="M270 170 C320 170 330 110 360 110" class="wire data" stroke="#f0182a"/><path class="flow c" d="M270 170 C320 170 330 110 360 110"/>
+
+          <g class="node" data-step="0"><rect x="12" y="18" width="88" height="44" rx="9"/><text x="26" y="45">Start</text></g>
+          <g class="node" data-step="0"><rect x="12" y="130" width="88" height="40" rx="9"/><text x="24" y="155">total</text></g>
+          <g class="node" data-step="0"><rect x="12" y="182" width="88" height="40" rx="9"/><text x="24" y="207">count</text></g>
+          <g class="node" data-step="1"><rect x="180" y="140" width="90" height="60" rx="9"/><rect class="hd blue" x="180" y="140" width="90" height="16" rx="8"/><text x="192" y="184">Divide ÷</text></g>
+          <g class="node" data-step="2"><rect x="180" y="18" width="120" height="60" rx="9"/><rect class="hd purple" x="180" y="18" width="120" height="16" rx="8"/><text x="192" y="62">Print</text></g>
+          <g class="node" data-step="3"><rect x="350" y="18" width="80" height="104" rx="9"/><rect class="hd red" x="350" y="18" width="80" height="16" rx="8"/><text x="364" y="84">Return</text></g>
+        </svg>
+        <p class="legend"><span class="lw"></span>White wires: what happens next <span class="lc"></span>Coloured wires: the data</p>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="pane code-pane">
+        <div class="pane-bar"><span>compiled JavaScript</span><span class="chip">simplified</span></div>
+<pre><code><span class="ln" data-step="0"><k>export async function</k> <f>unitPrice</f>(total, count) {</span>
+<span class="ln" data-step="1">  <k>const</k> price = total / count;</span>
+<span class="ln" data-step="2">  console.<f>log</f>(<s>"Unit Price: "</s> + price);</span>
+<span class="ln" data-step="3">  <k>return</k> price;</span>
+<span class="ln">}</span></code></pre>
+        <p class="legend">Follow along: each block lights up the line it becomes.</p>
+      </div>
+    </div>
+
+    <div class="row4 reveal">
+      <div><h4>Four kinds of thing</h4><p><b>Page data</b> a page shows, <b>page actions</b> it runs, <b>functions</b> you reuse, and <b>variables</b> they share.</p></div>
+      <div><h4>Types you can read</h4><p>Text, numbers, true or false, links, dates, objects and lists, each wire coloured by the kind of data it carries.</p></div>
+      <div><h4>Pages meet logic by name</h4><p>A button runs an action, a list repeats over data. The page only offers the links that fit.</p></div>
+      <div><h4>Run and test one piece</h4><p>Try a single function with your own inputs and watch its output in the console.</p></div>
+    </div>
+  </section>
+
+  <!-- 3. Learn -->
+  <section id="learn" class="section">
+    <div class="s-head reveal">
+      <span class="tag">Made for beginners</span>
+      <h2>Understand the code<br><em>your AI wrote.</em></h2>
+      <p>Vibe coding is fast, and it can leave you with an app you don't understand. Vibez lays that code out in a tidy structure and explains each part in plain words, so you learn how your app works while you build it.</p>
+    </div>
+
+    <div class="bento learn">
+      <a class="tile tile-xl reveal" href="#learn">
+        <img src="assets/inspector.jpg" alt="Double-clicking a button on the Vibez canvas explains that it links to the menu page and shows its settings">
+        <div class="tile-cap">
+          <span class="tag">Explained</span>
+          <h3>Double-click anything.<br><em>Learn what it does.</em></h3>
+          <p>Where a link goes, what a button's code does, what a form sends and where, and the file and line that made it.</p>
+        </div>
+      </a>
+
+      <div class="tile explain reveal">
+        <div class="bubble" id="bubble"><b id="bTitle">Button “Add to cart”</b><span id="bText">When clicked, it adds this item to the cart and updates the total on the page.</span></div>
+        <div class="tile-cap">
+          <span class="tag">Plain words</span>
+          <h3>No jargon.</h3>
+          <p>Explanations say what something does, not what it's called.</p>
+        </div>
+      </div>
+
+      <div class="tile tidy reveal">
+        <div class="tidy-list">
+          <div><i class="c1"></i>Page data</div>
+          <div><i class="c2"></i>Page actions</div>
+          <div><i class="c3"></i>Functions</div>
+          <div><i class="c4"></i>Variables</div>
+        </div>
+        <div class="tile-cap">
+          <span class="tag">Organized</span>
+          <h3>Everything in <em>its place.</em></h3>
+          <p>AI changes land in the same tidy groups you edit by hand.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row4 reveal">
+      <div><h4>Errors that teach</h4><p>Compile checks catch a missing wire or a loop that goes nowhere, and say exactly what to fix.</p></div>
+      <div><h4>Find the right block</h4><p>Type a few letters and see blocks grouped by what they do, each with a one-line hint.</p></div>
+      <div><h4>AI plays by the same rules</h4><p>Agents edit your app through Vibez itself. Every change is checked like yours, shows up live, and is one undo away.</p></div>
+      <div><h4>See what actually ran</h4><p>Run your app once and Vibez draws the steps it took, so you can follow a click from the page to the code.</p></div>
+    </div>
+  </section>
+
+  <!-- 4. Canvas -->
+  <section id="canvas" class="section">
+    <div class="s-head reveal">
+      <span class="tag">Site canvas</span>
+      <h2>Your whole site<br><em>on one screen.</em></h2>
+      <p>Every page appears side by side, running for real, with a line from each link to the page it opens. Drag things where you want them and the HTML file changes with it.</p>
+    </div>
+    <div class="bento canvas">
+      <div class="tile tile-wide reveal">
+        <img src="assets/canvas.jpg" alt="Four pages of a bakery site side by side on the Vibez Site canvas, with lines from links to the pages they open">
+        <div class="tile-cap">
+          <span class="tag">Canvas</span>
+          <h3>Every page, <em>every link.</em></h3>
+        </div>
+      </div>
+      <div class="tile reveal">
+        <img src="assets/dashboard.jpg" alt="The Vibez Dashboard with page templates">
+        <div class="tile-cap">
+          <span class="tag">Templates</span>
+          <h3>New pages <em>that fit.</em></h3>
+        </div>
+      </div>
+    </div>
+    <div class="list-grid reveal">
+      <div><h4>Drop exactly where you point</h4><p>Buttons, cards and sections land right under your cursor.</p></div>
+      <div><h4>Link by picking a page</h4><p>Choose a page from a list, or click it on the canvas.</p></div>
+      <div><h4>Delete without fear</h4><p>Pages go to the Trash with their navigation links. Undo brings anything back.</p></div>
+      <div><h4>Full-length pages</h4><p>See every page top to bottom, or open one alone.</p></div>
+      <div><h4>Phone, tablet, desktop</h4><p>Every page re-renders at the size you pick.</p></div>
+      <div><h4>View it like a visitor</h4><p>Open the site in your browser the way people will see it.</p></div>
+    </div>
+  </section>
+
+  <section id="principles" class="principles reveal">
+    <div><h4>Files are the truth</h4><p>Every edit on a canvas is a real file you can read, share and keep.</p></div>
+    <div><h4>Nothing hidden</h4><p>Every block becomes JavaScript you can open and read.</p></div>
+    <div><h4>Warn, don't block</h4><p>Teammates get a heads-up, and nobody gets locked out.</p></div>
+    <div><h4>Plain words</h4><p>If you can't tell what something does, Vibez tells you.</p></div>
   </section>
 
   <section class="closing">
-    <h2>Vibez is in active development.</h2>
-    <p>It's built on Code - OSS, so your editor, extensions and keybindings come with you.</p>
+    <h2 class="outline big" aria-hidden="true">Vibez</h2>
+    <div class="closing-inner reveal">
+      <h2>Build with AI.<br><em>Understand every part.</em></h2>
+      <p>Built on Code - OSS, so the editor, extensions and shortcuts you know come with you.</p>
+    </div>
   </section>
+
 </main>
 
 <footer>
-  <span><img src="assets/logo-sm.png" alt="Vibez" width="75" height="24"></span>
-  <span>© 2026</span>
+  <img src="assets/logo-light-sm.png" alt="Vibez" width="75" height="24">
+  <span>© 2026 Vibez</span>
 </footer>
 
+<script src="main.js" defer></script>
 </body>
 </html>
