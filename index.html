@@ -154,6 +154,51 @@
       </div>
     </div>
 
+    <div class="link-head reveal">
+      <h3>Pages and logic, <em>linked by name.</em></h3>
+      <p>Build the page in the page editor and point each part at the <code>.vi</code> file behind it. A field fills an input, a button runs an action, a list repeats over data.</p>
+    </div>
+
+    <div class="compare link reveal">
+      <div class="pane page-pane">
+        <div class="pane-bar"><span>signup.ui</span><span class="chip">page editor</span></div>
+        <div class="mini-page">
+          <div class="mp-nav"><span class="mp-logo"></span><span></span><span></span><span></span></div>
+          <h5>Join the club</h5>
+          <div class="ui-el mp-input" data-step="0"><span>you@email.com</span><i class="bind">fills <b>email</b></i></div>
+          <div class="ui-el mp-btn" data-step="1"><span>Sign up</span><i class="bind">runs <b>addMember</b></i></div>
+          <div class="ui-el mp-list" data-step="2">
+            <i class="bind">repeats <b>members</b></i>
+            <div class="mp-row"><span class="mp-av"></span>maya@email.com</div>
+            <div class="mp-row"><span class="mp-av"></span>leo@email.com</div>
+            <div class="mp-row"><span class="mp-av"></span>sam@email.com</div>
+          </div>
+        </div>
+        <p class="legend note" id="linkCaption">The email field fills the <b>email</b> input of <b>addMember</b>.</p>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="pane graph-pane">
+        <div class="pane-bar"><span>members.vi</span><span class="chip">logic</span></div>
+        <svg viewBox="0 0 440 260" aria-label="The addMember action adds an email to the members list, and members is offered to pages as data">
+          <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#1ea7ff"/><stop offset="1" stop-color="#c7148f"/></linearGradient></defs>
+          <text x="14" y="18" class="cap">Page action · addMember(email)</text>
+          <path d="M110 52 C140 52 145 52 176 52" class="wire exec"/><path class="flow w" d="M110 52 C140 52 145 52 176 52"/>
+          <path d="M306 52 C325 52 330 52 350 52" class="wire exec"/><path class="flow w" d="M306 52 C325 52 330 52 350 52"/>
+          <path d="M110 84 C140 84 145 86 176 86" class="wire data" stroke="url(#g2)"/><path class="flow c" d="M110 84 C140 84 145 86 176 86"/>
+          <path d="M140 196 C160 196 150 108 176 108" class="wire data" stroke="#7b6cf6"/><path class="flow c" d="M140 196 C160 196 150 108 176 108"/>
+
+          <g class="node" data-step="0 1"><rect x="12" y="32" width="98" height="68" rx="9"/><rect class="hd grey" x="12" y="32" width="98" height="16" rx="8"/><text x="24" y="72">Start</text><text x="24" y="90" class="pin">email</text></g>
+          <g class="node" data-step="1"><rect x="176" y="32" width="130" height="92" rx="9"/><rect class="hd purple" x="176" y="32" width="130" height="16" rx="8"/><text x="188" y="72">Add to list</text><text x="188" y="92" class="pin">item</text><text x="188" y="112" class="pin">list</text></g>
+          <g class="node" data-step="1"><rect x="350" y="32" width="80" height="56" rx="9"/><rect class="hd red" x="350" y="32" width="80" height="16" rx="8"/><text x="362" y="74">Return</text></g>
+          <g class="node" data-step="2"><rect x="12" y="176" width="128" height="44" rx="9"/><rect class="hd blue" x="12" y="176" width="128" height="14" rx="7"/><text x="24" y="212">Get members</text></g>
+          <text x="14" y="160" class="cap">Variable · members</text>
+          <g class="node" data-step="2"><rect x="250" y="176" width="180" height="44" rx="9"/><rect class="hd blue" x="250" y="176" width="180" height="14" rx="7"/><text x="262" y="212">Page data · members</text></g>
+          <path d="M140 204 C190 204 200 204 250 204" class="wire data" stroke="#1ea7ff"/><path class="flow c" d="M140 204 C190 204 200 204 250 204"/>
+        </svg>
+        <p class="legend note">Names are the contract: rename <b>addMember</b> and the page shows the link as broken.</p>
+      </div>
+    </div>
+
     <div class="row4 reveal">
       <div><h4>Four kinds of thing</h4><p><b>Page data</b> a page shows, <b>page actions</b> it runs, <b>functions</b> you reuse, and <b>variables</b> they share.</p></div>
       <div><h4>Types you can read</h4><p>Text, numbers, true or false, links, dates, objects and lists, each wire coloured by the kind of data it carries.</p></div>

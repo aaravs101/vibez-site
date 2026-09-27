@@ -58,14 +58,37 @@
   }
 
   /* Graph ↔ code: light up each block and the line it becomes */
-  const nodes = document.querySelectorAll('.node[data-step]');
-  const lines = document.querySelectorAll('.ln[data-step]');
+  const first = document.querySelector('.compare:not(.link)');
+  const nodes = first ? first.querySelectorAll('.node[data-step]') : [];
+  const lines = first ? first.querySelectorAll('.ln[data-step]') : [];
   if (nodes.length && lines.length) {
     (async () => {
       for (let step = 0; ; step = (step + 1) % 4) {
         nodes.forEach((n) => n.classList.toggle('on', n.dataset.step === String(step)));
         lines.forEach((l) => l.classList.toggle('on', l.dataset.step === String(step)));
         await wait(1500);
+      }
+    })();
+  }
+
+
+  /* Page editor ↔ .vi: each part of the page lights up the logic it points at */
+  const link = document.querySelector('.compare.link');
+  const cap = document.getElementById('linkCaption');
+  if (link) {
+    const els = link.querySelectorAll('.ui-el[data-step]');
+    const gnodes = link.querySelectorAll('.node[data-step]');
+    const CAPS = [
+      'The email field fills the <b>email</b> input of <b>addMember</b>.',
+      'The Sign up button runs <b>addMember</b>, which adds the email to the list.',
+      'The list repeats once for each item in <b>members</b>.',
+    ];
+    (async () => {
+      for (let step = 0; ; step = (step + 1) % 3) {
+        els.forEach((n) => n.classList.toggle('on', n.dataset.step === String(step)));
+        gnodes.forEach((n) => n.classList.toggle('on', n.dataset.step.split(' ').includes(String(step))));
+        if (cap) cap.innerHTML = CAPS[step];
+        await wait(2200);
       }
     })();
   }
